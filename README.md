@@ -1,2 +1,4 @@
-# scalaplaysample
-A simple web project with scala and play framework
+# Scala+Play+MongoDb Sample
+A simple todo web app with scala, play framework and MongoDb.
+
+

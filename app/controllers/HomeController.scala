@@ -30,7 +30,7 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     request.session.get("username").map {
       user => Ok("Hello " + user)
     }.getOrElse {
-      Unauthorized("Fuck this")
+      Unauthorized("error")
     }
   }
 
@@ -38,7 +38,6 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     val mongoClient: MongoClient = MongoClient("mongodb://localhost")
     val database: MongoDatabase = mongoClient.getDatabase("ScalaPlaySample")
     val collection: MongoCollection[Document] = database.getCollection("Projects")
-
     Ok("succes")
   }
 
